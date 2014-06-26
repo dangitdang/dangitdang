@@ -9,6 +9,8 @@
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <link href="custom.css" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -17,7 +19,7 @@
     <![endif]-->
   </head>
   <body>
-    <div class = "navbar navbar-default" role="nagivation">
+    <div class = "navbar navbar-default navbar-fixed-top" role="nagivation">
       <div class="container-fluid">
         <div class ="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -27,9 +29,26 @@
             <span class="icon-bar"></span>
           </button>
         </div>
+        <div class ="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-collapse collpase">
+        </div>
       </div>
     </div>
-    <h1>Hello. World.</h1>
+
+    <div class="container">
+
+      <div class="jumbotron">
+        <h1>Hello. World.</h1>
+        <p> This is my personal webpage. I'm practicing with HTML5 and bootstrap. Bootstrap is amazing! It's so easy and quick to build a wonderful looking website!</p>
+      </div>
+    </div>
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
