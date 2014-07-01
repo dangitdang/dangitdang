@@ -1,12 +1,17 @@
 body {
   min-height: 1000px;
   padding-top: 90px;
-  padding-left: 25px;
+
 }
 
 .jumbotron h1{
 	top: 20px;
 }
 .jumbotron {
-	background-color: #CCFFFF;
+	background-image: url("http://p1.pichost.me/i/51/1750849.jpg");
+	height: 500px;
+}
+
+.jumbotron {
+	color: white;
 }
