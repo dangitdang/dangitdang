@@ -1,4 +1,12 @@
 body {
   min-height: 1000px;
-  padding-top: 250px;
+  padding-top: 90px;
+  padding-left: 25px;
+}
+
+.jumbotron h1{
+	top: 20px;
+}
+.jumbotron {
+	background-color: #CCFFFF;
 }
