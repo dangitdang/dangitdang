@@ -28,7 +28,8 @@ html,
 body {
   height: 100%;
   /*background-color: #333;*/
-  background-image: url("bg.jpg")
+  background-image: url("bg.jpg");
+  background-repeat: no-repeat;
 }
 body {
   color: #fff;
@@ -135,7 +136,7 @@ body {
 }
 
 .inner.cover .cov-body {
-    font-family:'Lobster', sans-serif;
+    font-family: 'Oxygen', sans-serif;
     text-align: right;
     margin: 0px;
     font-size: 1.1em;
@@ -144,7 +145,7 @@ body {
 
 
 .lead{
-    font-family: 'Lobster', sans-serif;
+    font-family: 'Oxygen', sans-serif;
     text-align: left;
     padding-left: 1.6em;
     margin: 0px;
@@ -153,21 +154,29 @@ body {
     padding-top: 20px;
 }
 .info{
-    text-align: center;
+    font-family: 'Oxygen', sans-serif;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 .inner.cover ul{
-    text-align: center;
+    font-family: 'Oxygen', sans-serif;
+    margin: auto;
+    margin-left: 20%;
     list-style: none;
 }
+.inner.cover ul a:hover {
+    text-decoration: underline;
+}
+
 .cover img {
     max-width: 35%;
     margin: auto;
     border-radius: 100%;
     display:block;
-    margin-bottom: 20px
-
+    margin-bottom: 20px;
 }
+
 /*
  * Footer
  */
@@ -203,14 +212,17 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    width: 90%; /* Must be percentage or pixels for horizontal alignment */
   }
   .info{
       float: left;
       max-width: 70%;
+      text-align: left;
   }
   .inner.cover ul{
+      margin: auto;
       float: right;
+      text-align: left;
   }
 
 }
