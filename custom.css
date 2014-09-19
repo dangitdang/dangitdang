@@ -152,6 +152,9 @@ body {
 .inner.cover .coverbody{
     padding-top: 20px;
 }
+.inner.cover a{
+  color:#42E9FF;
+}
 .info{
     font-family: 'Oxygen', sans-serif;
     margin: auto;
