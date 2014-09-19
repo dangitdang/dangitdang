@@ -152,7 +152,7 @@ body {
 .inner.cover .coverbody{
     padding-top: 20px;
 }
-.inner.cover a{
+.inner.cover .lead a{
   color:#42E9FF;
 }
 .info{
