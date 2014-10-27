@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Ion.RangeSlider - test</title>
+    <link rel="stylesheet" href="css/normalize.min.css" />
+    <link rel="stylesheet" href="css/ion.rangeSlider.css" />
+    <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
+    <style type="text/css">
+        #header {
+            font-family: Helvetica;
+            font-weight: Bold;
+            color: #bbb;
+            font-size: 55px;
+            margin:0px 8px;
+            overflow: hidden;
+            height: 55px;
+            top:-15px;
+            position:absolute;
+        }
+        #flightpath{
+        margin: 40px 0px;
+        background: #eee;
+      }
+      button {
+        margin: 20px 0 0 20px;
+  }
+​</style>
+</head>
+<body>
+
+<div id = "header">drone.js</div>
+
+<div id ="flightpath"></div>
+
+<div style="position: relative; padding: 200px;">
+
+<input type="text" id="timeLine" />
+
+</div>
+
+<!-- All JS -->
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/ion.rangeSlider.min.js"></script>
+<script src="js/sampledata.js"></script>
+
+<script>
+
+
+    var flightArray = [];
+    var sampleFlight = [2,3,1,3,4];
+    flightArray[0] = new droneFlight(new Date(2014,02,07), sampleFlight);
+    flightArray[4] = new droneFlight(new Date(2014,02,08), sampleFlight);
+    flightArray[3] = new droneFlight(new Date(2014,02,09), sampleFlight);
+    flightArray[5] = new droneFlight(new Date(2014,02,10), sampleFlight);
+    flightArray[2] = new droneFlight(new Date(2014,02,11),sampleFlight);
+    flightArray[1] = new droneFlight(new Date(2014,02,12), sampleFlight);
+    flightArray.sort(function (a,b){
+        if (a.getDateInt() > b.getDateInt()) {
+            return 1;
+        }
+        if (a.getDateInt() < b.getDateInt()) {
+            return -1;
+        }
+        return 0;
+    });
+    var dates =[];
+    flightArray.forEach(function(element, index, array){
+        dates[index] = element.getDateStr();
+    })
+    console.log(dates);
+    var w = $(document).width();
+    var h = $(document).height()*.4;
+    var prev = null;
+    var svg = d3.select("#flightpath")
+      .append("svg")
+      .attr("width", w)
+      .attr("height", h)
+      .attr("id", "visualization")
+      .attr("xmlns", "http://www.w3.org/2000/svg");
+
+    $(document).ready(function(){
+        $("#timeLine").ionRangeSlider({
+            values: dates,
+            type: 'single',
+            step: 1,
+            from: "Mar 09 2014",
+            prettify: true,
+            hasGrid: false,
+            onChange: function(obj){
+                console.log(obj)
+                if (obj.fromValue === prev){
+                    return;
+                }
+                prev = obj.fromValue;
+                var data = d3.range(11).map(function(){return Math.random()*10})
+                var x = d3.scale.linear().domain([0, 10]).range([0, w]);
+                var y = d3.scale.linear().domain([0, 10]).range([10, h-10]);
+                var line = d3.svg.line()
+                  .interpolate("cardinal")
+                  .x(function(d,i) {return x(i);})
+                  .y(function(d) {return y(d);})
+                svg.select("path").remove()
+                var path = svg.append("path")
+                  .attr("d", line(data))
+                  .attr("stroke", "steelblue")
+                  .attr("stroke-width", "2")
+                  .attr("fill", "none");
+
+                var totalLength = path.node().getTotalLength();
+
+                path
+                  .attr("stroke-dasharray", totalLength + " " + totalLength)
+                  .attr("stroke-dashoffset", totalLength)
+                  .transition()
+                    .duration(4000)
+                    .ease("linear")
+                    .attr("stroke-dashoffset", 0);
+            }
+        });
+
+    });
+</script>
+
+
+
+
+</body>
+</html>
