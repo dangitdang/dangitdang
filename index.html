@@ -1,81 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+<DOCTYPE! HTML>
+<html>
+    <head>
+        <title> Dang Pham </title>
+        <meta name="author" content="Dang Pham">
 
-    <title>Dang Pham</title>
+        <link href="css/semantic.min.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <script type="text/javascript" src="js/fetchablums.js"></script>
+        <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="js/semantic.min.js"></script>
+    </head>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-    <!-- Custom styles for this template -->
-    <link href="custom.css" rel="stylesheet">
-    <link href='css/font-awesome.min.css' rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-  <body>
-
-    <div class="site-wrapper">
-
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-          <div class="masthead clearfix">
-            <div class="inner">
-              <ul class="nav masthead-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Reviews</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
+    <body>
+        <div class="container">
+            <div class="ui borderless large menu inverted">
+                    <a class="item right" href="/projects.html">
+                        Projects
+                    </a>
+                    <a class="active item right" href="#">
+                        Home
+                    </a>
             </div>
-          </div>
+            <div class="main">
+                <div class="ui two column padded stackable grid">
+                    <div id="about" class="column">
+                        <div class="ui red inverted segment name">
+                            <div class="ui right aligned header"><h1> Dang Hai Pham</h1></div>
+                        </div>
+                        <div class="ui three column padded grid">
+                            <div id="resume" class="twelve wide column">
+                                <div class="ui blue inverted segment">
+                                    <h3 class= "ui right aligned header"><a href='./Resume.pdf'> Resume</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ui black inverted segment about">
+                            <ui class="ui list">
+                                <li class="item"> An avid cook; better at napping than most; engineer at heart. </li>
+                                <li class="item"> I'm currently a developer at MIT Sensable City Lab working a smart sewage system</li>
+                                <li class="item"> I have a big interest development in the field of music and interactive media </li>
+                                <li class="item"> Learning and practicing data viz, making data more human</li>
+                            </ui>
+                        </div>
+                    </div>
 
-          <div class="inner cover">
-            <h1 class="cover-heading">dang hai pham</h1>
-            <p class='lead'><a href='./Resume.pdf'>resume</a> </p>
-            <p class="lead">engineer, napper, cook, and pseudo musician. MIT'17</p>
-            <div class="coverbody">
-                <p class="cov-body">computer science and math major</p>
-                <p class="cov-body">i'm interested in gigantic data, distributed computation, and encryption</p>
-                <p class="cov-body">i review music when I have the time to write</p>
-                <p class="cov-body">i'm also working to release some songs of my own</p>
-                
+                    <div class="seven wide right aligned column playing" id="music-info">
+                            <div class="ui teal inverted segment">
+                                <h2 class="ui right aligned header"> What's spinning </h2>
+                            </div>
+                            <div class="ui inverted left aligned segment">
+                                I love music and these are the albums I've listened to the most over the past 7 days. Currently I really enjoy dark electronica, if you have any suggestions please shoot me an email!
+                            </div>
+                            </div>
+                    <div class="nine wide column playing">
+                        <div id="nowplaying" class="ui flexible images"></div>
+                    </div>
+                </div>
+                                            <div class="ui purple inverted segment">
+                            
+                            <div class="ui large horizontal divided animated  list">
+                            <h3 class="item float">Contact Info</h3>
+                                    <a class="item" href="mailto:dangpham@mit.edu">
+                                        <i class="mail icon"></i>
+                                        <div class="content">
+                                        dangpham@mit.edu
+                                        </div>
+                                    </a> 
+                                    <a class="item" href="http://github.com/dangitdang">
+                                        <i class="github icon"></i>
+                                        <div class="content">
+                                        dangitdang
+                                        </div>
+                                    </a>
+                                    <a class="item" href="http://linkedin.com/pub/phamdang">
+                                        <i class="linkedin icon"></i>
+                                        <div class="content">
+                                        Dang H Pham
+                                        </div>
+                                    </a>              
+                                </div>
+                            </div>
             </div>
-          </div>
-
-          <div class="mastfoot">
-            <div class="inner">
-              <p>Built with<a href="http://getbootstrap.com">Bootstrap</a>.</p>
-            </div>
-          </div>
-
         </div>
-
-      </div>
-
-    </div>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/docs.min.js"></script>
-  </body>
+        <script>$(document).ready(getAlbums());</script>
+    </body>
 </html>

@@ -1,0 +1,82 @@
+.ui.menu {
+    margin: 30px 40px;
+    margin-bottom: 3.5%;
+    box-shadow:none;
+    background-color:#3e3d3d;
+}
+.ui.menu:first-child{
+    margin-top: 30px;
+}
+
+body {
+    background-color: #1b1c1d;
+}
+
+.ui.segment {
+    border-radius: 0px;
+}
+h1 {
+    font-size:2.5em;
+}
+.ui.about {
+    padding-top:0px;
+}
+.ui.inverted.name {
+    margin-bottom: 0px;
+    padding-left:0px;
+}
+#nowplaying {
+    text-align:center;
+}
+.ui.flexible.images img {
+    width: 20%;
+    margin: .75% .75% .75% .75%;
+}
+
+#about, #resume {
+    padding-top:0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+}
+#resume a{
+    color: white;
+}
+#resume a:hover {
+    color: white;
+    text-decoration: underline;
+}
+.playing, #music-info{
+    padding-top: 0px;
+    padding-left: 0px;
+}
+.main {
+    background-color: #303030;
+}
+.ui.inverted.black.segment, .ui.inverted.segment{
+    background-color: #303030!important;
+}
+.footer {
+    color: white;
+    text-align: center;
+    position: absolute;
+    margin: auto;
+    bottom:0px;
+    width:100%;
+}
+
+.ui.list a.item{
+    color: white;
+}
+.ui.list .list>a.item i.icon, .ui.list>a.item i.icon {
+    color: rgba(255, 255, 255, 0.4);
+}
+.ui.list>a.item i.icon:hover {
+    color: rgba(255,255,255,0.8);
+}
+
+.ui.list a.item:hover > i.icon {
+    color:rgba(255,255,255,0.8);
+}
+.ui.divided.horizontal.list>.item {
+    border-left: 1px solid rgba(255,255,255,.50)
+}
