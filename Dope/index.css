@@ -1,0 +1,16 @@
+body {
+	position: relative;
+}
+.controls {
+	position: absolute;
+	top: 2%;
+	right: 25px;
+	width: 450px;
+	height: 600px;
+}
+
+.results {
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+

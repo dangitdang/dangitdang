@@ -1,0 +1,59 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.15/p5.js"></script>
+  <!-- uncomment lines below to include extra p5 libraries -->
+	<!--<script language="javascript" src="../addons/p5.dom.js"></script>-->
+  <script language="javascript" src="p5.sound.min.js"></script>
+  <script language="javascript" type="text/javascript" src="sketch.js"></script>
+  <script language="javascript" type="text/javascript" src="planet.js"></script>
+  <script language="javascript" type="text/javascript" src="track.js"></script>
+  <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+  <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.js'></script>
+  <script type="text/javascript" src='system.js'></script>
+  <script type="text/javascript" src='controller.js'></script>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css' rel='stylesheet'>
+  <link href='index.css' rel='stylesheet'>
+
+
+  <!-- this line removes any default padding and style. you might only need one of these values set. -->
+  <style> body {padding: 0; margin: 0;} </style>
+</head>
+  <div class='controls'>
+    <div class="ui top attached inverted grey tabular menu">
+      <a class="item active" data-tab="second">Search</a>
+      <a class="item" data-tab="third">Libary</a>
+    </div>
+    <div class="ui bottom attached tab inverted grey segment active" data-tab="second">
+      <div class='search'>
+        <div class="ui fluid action input">
+          <select class="ui right dropdown search-options">
+            <option value="genres">Genres</option>
+            <option value="performers">Performers</option>
+            <option value="instruments">Instruments</option>
+            <option value="song_names">Song Name</option>
+            <option value="tempo">Tempo</option>
+            <option value="instrument_names">Instrument Names</option>
+            <option value="musical_keys">Musical Keys</option>
+            <option value="packages">Packages</option>
+            <option value="type">Type</option>
+          </select>
+          <input class='search-query' type="text" placeholder="Search...">
+          <div type="submit" class="ui button search-button">Search</div>
+        </div>
+        <div class="results"></div>
+        <div class="ui centered grid">
+          <div class='six wide column paging'></div>
+        </div>
+      </div>
+    </div>
+    <div class="ui bottom attached inverted grey tab segment" data-tab="third">
+      <div class='ui library celled selection list'>
+      </div>
+    </div>
+    </div>
+
+  </div>
+<body>
+</body>
+</html>
