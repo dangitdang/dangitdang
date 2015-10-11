@@ -48,12 +48,12 @@ $(function() {
                     track.play();
                 });
             } else {
+                if (track.isPlaying()) {
+                    track.stop();
+                }
                 track.changeSample({
                     path: link
                 }, function() {
-                    if (track.isPlaying()) {
-                        track.stop();
-                    }
                     track.play();
                 });
             }
